@@ -1,13 +1,17 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // app.use(express.static("./dist"));
 app.use(express.json())
 app.use(cors())
 
 app.get("/", (req, res) => {
+  res.send("Welcome to the Express server!");
+});
+
+app.get("/test", (req, res) => {
   res.json({ message: "Hello from backend" });
 });
 
