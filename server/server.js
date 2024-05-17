@@ -7,7 +7,7 @@ const PORT = 3000;
 app.use(express.json())
 app.use(cors())
 
-app.get("/test", (req, res) => {
+app.get("/", (req, res) => {
   res.json({ message: "Hello from backend" });
 });
 
