@@ -1,5 +1,5 @@
-const BACKEND_URL = "etudedeployrailway-production.up.railway.app";
-// const BACKEND_URL = "https://etudedeployrailway-production.up.railway.app";
+// const BACKEND_URL = "etudedeployrailway-production.up.railway.app";
+const BACKEND_URL = "https://etudedeployrailway-production.up.railway.app";
 
 function chainPromise(promise) {
   return promise
