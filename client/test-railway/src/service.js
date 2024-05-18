@@ -1,4 +1,4 @@
-const BACKEND_URL = "http://localhost:3000/test"
+const BACKEND_URL = "etudedeployrailway-production.up.railway.app";
 
 function chainPromise(promise) {
   return promise
@@ -13,6 +13,6 @@ function chainPromise(promise) {
 
 // Session
 export function fetchTest() {
-  const fetched = fetch(BACKEND_URL);
+  const fetched = fetch(`${BACKEND_URL}/test`);
   return chainPromise(fetched);
 }
