@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/test", (req, res) => {
-  res.json({ message: "Hello from backend" });
+  res.json({ message: "Hello from backend!" });
 });
 
 app.listen(PORT, () => {
