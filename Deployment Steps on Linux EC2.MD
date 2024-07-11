@@ -9,6 +9,7 @@
 ## Launch EC2 instance, get key-value pair, get into Ubuntu instance
 - sudo apt update (Update the server)
 - sudo apt install nginx (Install nginx)
+- sudo systemctl start nginx (Start nginx server)
 - (Go to AWS EC2 console, past Public IPv4 address in browser)
 - sudo apt install -y npm 
 - which npm (To verify npm)
@@ -37,3 +38,6 @@
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
+
+- sudo nginx -t (Check any errors)
+
