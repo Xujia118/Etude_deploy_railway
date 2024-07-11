@@ -9,13 +9,12 @@
 ## Launch EC2 instance, get key-value pair, get into Ubuntu instance
 - sudo apt update (Update the server)
 - sudo apt install nginx (Install nginx)
-- sudo systemctl start nginx (Start nginx server)
 - (Go to AWS EC2 console, past Public IPv4 address in browser)
 - sudo apt install -y npm 
 - which npm (To verify npm)
 - sudo apt install -y nodejs
 - node -v (To verfity node.js)
-- sudo apt install pm2@latest -g (So that the app will run when terminal is killed)
+- npm install -g pm2  (So that the app will run when terminal is killed)
 
 ## git clone the repository to Linux 
 - npm install in both frontend and backend folders
@@ -25,6 +24,7 @@
 - pm2 logs 0 (to check status. Node application should be running, with our own listening to port message)
 
 ## Configure Nginx Server
+- sudo systemctl start nginx (Start nginx server)
 - sudo vim /etc/nginx/sites-available/default 
 - comment all the directives in location. Paste the following:
 
@@ -40,4 +40,5 @@
     }
 
 - sudo nginx -t (Check any errors)
+- sudo systemctl restart nginx (restar nginx server)
 
