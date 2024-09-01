@@ -6,6 +6,26 @@
 - Make sure the built application runs locally without React server running
 - Make the final commit, push it to GitHub 
 
+In Amplify, edit build yaml file as follows:
+
+version: 1
+frontend:
+    phases:
+        preBuild:
+            commands:
+                - cd frontend(adjust as needed)
+                - npm install
+        build:
+            commands:
+                - npm run build
+    artifacts:
+        baseDirectory: frontend/dist
+        files:
+            - '**/*'
+    cache:
+        paths:
+            - frontend/node_modules/**/* 
+
 ## Launch EC2 instance, get key-value pair, get into Ubuntu instance
 - sudo apt update (Update the server)
 - sudo apt install nginx (Install nginx)
@@ -14,7 +34,7 @@
 - which npm (To verify npm)
 - sudo apt install -y nodejs
 - node -v (To verfity node.js)
-- npm install -g pm2  (So that the app will run when terminal is killed)
+- sudo npm install -g pm2  (So that the app will run when terminal is killed)
 
 ## git clone the repository to Linux 
 - npm install in both frontend and backend folders
